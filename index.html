@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Fotografer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fotografer | Sutan Mudo Visual</title>
 
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -12,6 +14,7 @@
             margin: 0;
             background: #fafafa;
             color: #222;
+            overflow-x: hidden;
         }
 
         section {
@@ -23,25 +26,29 @@
         .hero {
             background: linear-gradient(to right, #111, #1c1c1c);
             color: #ff00fb;
+            padding: 100px 20px;
         }
 
         .hero h1 {
             font-size: 42px;
             letter-spacing: 3px;
+            margin: 0;
         }
 
         .hero p {
             font-size: 16px;
             color: #ccc;
+            margin-top: 10px;
         }
 
-        /* ABOUT (FIX UTAMA DI SINI) */
+        /* ABOUT */
         .about {
             max-width: 900px;
             margin: auto;
             background: #f8f8f8;
             padding: 60px 30px;
             border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
         .about h1 {
@@ -61,8 +68,8 @@
         }
 
         .about p {
-            font-size: 21px;      /* NAH INI YANG BIKIN ENAK DIBACA */
-            line-height: 2;       /* super nyaman di mata */
+            font-size: 18px;
+            line-height: 1.8;
             color: #444;
             max-width: 750px;
             margin: auto;
@@ -72,39 +79,61 @@
         h2 {
             margin-top: 60px;
             font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* GRID */
+        /* GRID SYSTEM - INI YANG DIPERBAIKI */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            /* Default HP: 2 kolom ke samping */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
-        /* FOTO */
+        /* Tablet (Lebar layar > 600px): 3 kolom ke samping */
+        @media (min-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Laptop/Desktop (Lebar layar > 1000px): PASTI 6 kolom ke samping */
+        @media (min-width: 1000px) {
+            .grid {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        /* STYLE FOTO */
         .grid img {
             width: 100%;
-            height: 260px;
+            height: 200px; /* Tinggi seragam agar rapi */
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 10px;
             transition: 0.4s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: block;
         }
 
         .grid img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(255, 0, 238, 0.3);
+            z-index: 1;
         }
 
         /* CONTACT */
         .contact {
             background: #111;
             color: #eee;
+            padding: 50px 20px;
         }
 
         .contact p {
             color: #bbb;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -121,7 +150,7 @@
     <section class="about">
         <h1>About Me</h1>
         <p>
-            Halo, Perkenalkan nama saya Muhamad Nahrul Hafiz saya adalah seorang mahasiswa  
+            Halo, Perkenalkan nama saya Muhamad Nahrul Hafiz. Saya adalah seorang mahasiswa  
             yang juga berkarier sebagai freelance fotografer. Saya memiliki ketertarikan mendalam 
             dalam dunia visual, dengan fokus pada fotografi yang mampu menyampaikan cerita dan bahagia. 
             Saya telah mengerjakan berbagai proyek seperti fotografi potret, event, dan dokumentasi.
@@ -132,35 +161,36 @@
     <section>
         <h2>Engagement</h2>
         <div class="grid">
-            <img src="foto1.jpg">
-            <img src="foto2.jpg">
-            <img src="foto3.jpg">
-            <img src="foto4.jpg">
-            <img src="foto5.jpg">
-            <img src="foto6.jpg">
+            <img src="foto1.jpg" alt="Engagement 1">
+            <img src="foto2.jpg" alt="Engagement 2">
+            <img src="foto3.jpg" alt="Engagement 3">
+            <img src="foto4.jpg" alt="Engagement 4">
+            <img src="foto5.jpg" alt="Engagement 5">
+            <img src="foto6.jpg" alt="Engagement 6">
         </div>
 
         <h2>Prewedding</h2>
         <div class="grid">
-            <img src="prewed1.jpg">
-            <img src="prewed2.jpg">
-            <img src="prewed3.jpg">
-            <img src="prewed4.jpg">
-            <img src="prewed5.jpg">
-            <img src="prewed6.jpg">
+            <img src="prewed1.jpg" alt="Prewedding 1">
+            <img src="prewed2.jpg" alt="Prewedding 2">
+            <img src="prewed3.jpg" alt="Prewedding 3">
+            <img src="prewed4.jpg" alt="Prewedding 4">
+            <img src="prewed5.jpg" alt="Prewedding 5">
+            <img src="prewed6.jpg" alt="Prewedding 6">
         </div>
 
-          <h2>Event</h2>
+        <h2>Event</h2>
         <div class="grid">
-            <img src="event1.jpeg">
-            <img src="event2.jpeg">
-            <img src="event3.jpeg">
-            <img src="event4.jpeg">
-            <img src="event5.jpeg">
-            <img src="event6.jpeg">
+            <img src="event1.jpeg" alt="Event 1">
+            <img src="event2.jpeg" alt="Event 2">
+            <img src="event3.jpeg" alt="Event 3">
+            <img src="event4.jpeg" alt="Event 4">
+            <img src="event5.jpeg" alt="Event 5">
+            <img src="event6.jpeg" alt="Event 6">
         </div>
     </section>
  
+    <!-- CONTACT -->
     <section class="contact">
         <h2>Contact</h2>
         <p>WhatsApp: 0895410709467</p>

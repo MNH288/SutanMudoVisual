@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Saya</title>
+</head>
+<body>
+
+    <h1>Halo, ini website saya 👋</h1>
+    <p>Saya fotografer</p>
+
+</body>
+</html>

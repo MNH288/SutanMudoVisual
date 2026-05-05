@@ -83,34 +83,27 @@
             letter-spacing: 2px;
         }
 
-        /* GRID SYSTEM - INI YANG DIPERBAIKI */
+        /* GRID SYSTEM */
         .grid {
             display: grid;
-            /* Default HP: 2 kolom ke samping */
             grid-template-columns: repeat(2, 1fr); 
             gap: 15px;
             margin: 20px auto;
             max-width: 1200px;
         }
 
-        /* Tablet (Lebar layar > 600px): 3 kolom ke samping */
         @media (min-width: 600px) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        /* Laptop/Desktop (Lebar layar > 1000px): PASTI 6 kolom ke samping */
         @media (min-width: 1000px) {
-            .grid {
-                grid-template-columns: repeat(6, 1fr);
-            }
+            .grid { grid-template-columns: repeat(6, 1fr); }
         }
 
         /* STYLE FOTO */
         .grid img {
             width: 100%;
-            height: 200px; /* Tinggi seragam agar rapi */
+            height: 200px; 
             object-fit: cover;
             border-radius: 10px;
             transition: 0.4s;
@@ -140,20 +133,17 @@
 
 <body>
 
-    <!-- HERO -->
     <section class="hero">
         <h1>Sutan Mudo Visual</h1>
         <p>Wedding | Couple | Event Jakarta</p>
     </section>
 
-    <!-- ABOUT -->
     <section class="about">
         <h1>About Me</h1>
         <p>
             Halo, Perkenalkan nama saya Muhamad Nahrul Hafiz. Saya adalah seorang mahasiswa  
             yang juga berkarier sebagai freelance fotografer. Saya memiliki ketertarikan mendalam 
             dalam dunia visual, dengan fokus pada fotografi yang mampu menyampaikan cerita dan bahagia. 
-            Saya telah mengerjakan berbagai proyek seperti fotografi potret, event, dan dokumentasi.
         </p>
     </section>
 
@@ -161,36 +151,41 @@
     <section>
         <h2>Engagement</h2>
         <div class="grid">
-            <img src="foto1.jpg" alt="Engagement 1">
-            <img src="foto2.jpg" alt="Engagement 2">
-            <img src="foto3.jpg" alt="Engagement 3">
-            <img src="foto4.jpg" alt="Engagement 4">
-            <img src="foto5.jpg" alt="Engagement 5">
-            <img src="foto6.jpg" alt="Engagement 6">
+            <img src="foto1.jpg"> <img src="foto2.jpg"> <img src="foto3.jpg">
+            <img src="foto4.jpg"> <img src="foto5.jpg"> <img src="foto6.jpg">
         </div>
 
         <h2>Prewedding</h2>
         <div class="grid">
-            <img src="prewed1.jpg" alt="Prewedding 1">
-            <img src="prewed2.jpg" alt="Prewedding 2">
-            <img src="prewed3.jpg" alt="Prewedding 3">
-            <img src="prewed4.jpg" alt="Prewedding 4">
-            <img src="prewed5.jpg" alt="Prewedding 5">
-            <img src="prewed6.jpg" alt="Prewedding 6">
+            <img src="prewed1.jpg"> <img src="prewed2.jpg"> <img src="prewed3.jpg">
+            <img src="prewed4.jpg"> <img src="prewed5.jpg"> <img src="prewed6.jpg">
+        </div>
+
+        <h2>Wedding</h2>
+        <div class="grid">
+            <img src="wedding1.jpg"> <img src="wedding2.jpg"> <img src="wedding3.jpg">
+            <img src="wedding4.jpg"> <img src="wedding5.jpg"> <img src="wedding6.jpg">
         </div>
 
         <h2>Event</h2>
         <div class="grid">
-            <img src="event1.jpeg" alt="Event 1">
-            <img src="event2.jpeg" alt="Event 2">
-            <img src="event3.jpeg" alt="Event 3">
-            <img src="event4.jpeg" alt="Event 4">
-            <img src="event5.jpeg" alt="Event 5">
-            <img src="event6.jpeg" alt="Event 6">
+            <img src="event1.jpeg"> <img src="event2.jpeg"> <img src="event3.jpeg">
+            <img src="event4.jpeg"> <img src="event5.jpeg"> <img src="event6.jpeg">
+        </div>
+
+        <h2>Family Gathering</h2>
+        <div class="grid">
+            <img src="fam1.jpg"> <img src="fam2.jpg"> <img src="fam3.jpg">
+            <img src="fam4.jpg"> <img src="fam5.jpg"> <img src="fam6.jpg">
+        </div>
+
+        <h2>Religious Studies</h2>
+        <div class="grid">
+            <img src="religius1.jpg"> <img src="religius2.jpg"> <img src="religius3.jpg">
+            <img src="religius4.jpg"> <img src="religius5.jpg"> <img src="religius6.jpg">
         </div>
     </section>
  
-    <!-- CONTACT -->
     <section class="contact">
         <h2>Contact</h2>
         <p>WhatsApp: 0895410709467</p>
